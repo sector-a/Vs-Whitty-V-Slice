@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "name": "Whitty",
+  "assetPath": "dialogue/portraits/whittyPort",
+  "flipX": false,
+  "isPixel": false,
+  "scale": 0.8,
+  "offsets": [240, 220],
+  "animations": [
+    {
+      "name": "normal",
+      "prefix": "Whitty Portrait Normal instance 1",
+      "offsets": [0, 0],
+      "frameRate": 12
+    },
+    {
+      "name": "agitated",
+      "prefix": "Whitty Portrait Agitated instance 1",
+      "offsets": [0, 0],
+      "frameRate": 12
+    },
+    {
+      "name": "crazy",
+      "prefix": "Whitty Portrait Crazy instance 1",
+      "offsets": [0, 0],
+      "frameRate": 12,
+      "looped": true
+    }
+  ]
+}

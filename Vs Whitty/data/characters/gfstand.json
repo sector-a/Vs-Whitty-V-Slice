@@ -1,0 +1,43 @@
+{
+    "version": "1.0.0",
+    "name": "GF Standing",
+    "renderType": "multisparrow",
+    "assetPath": "characters/GF_Standing_Sway",
+    "flipX": false,
+    "singTime": 4,
+    "animations": [
+        {
+            "name": "sad",
+            "prefix": "sad",
+            "offsets": [
+                -25,
+                -7
+            ]
+        },
+        {
+            "name": "scared",
+            "prefix": "scared",
+            "offsets": [
+                0,
+                0
+            ],
+            "looped": true
+        },
+        {
+            "name": "danceLeft",
+            "prefix": "GF Dancing Beat",
+            "offsets": [
+                0,
+                0
+            ]
+        },
+        {
+            "name": "danceRight",
+            "prefix": "GF Dancing Beat",
+            "offsets": [
+                0,
+                0
+            ]
+        }
+    ]
+}

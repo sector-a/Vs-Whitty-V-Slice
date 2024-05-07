@@ -1,0 +1,50 @@
+import flixel.FlxG;
+import flixel.FlxSprite;
+import funkin.Paths;
+import funkin.play.stage.Stage;
+import funkin.play.PlayState;
+import funkin.graphics.shaders.OverlayBlend;
+
+class AlleyBallisticStage extends Stage {
+	function new() {
+		super('alleyCrazy');
+	}
+
+	var funneEffect:FlxSprite;
+	var theFunneNumber:Float = 1;
+	
+	function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+
+		funneEffect = new FlxSprite(-600, -200).loadGraphic(Paths.image('bgs/thefunnyeffect', 'shared'));
+		funneEffect.alpha = 0.5;
+		funneEffect.scrollFactor.set();
+		funneEffect.visible = true;
+		PlayState.instance.currentStage.add(funneEffect);
+		PlayState.instance.currentStage.refresh();
+
+		funneEffect.cameras = [PlayState.instance.camHUD];
+	}
+
+	function onUpdate(event:ScriptEvent) {
+		super.onUpdate(event);
+
+		if (getGirlfriend() != null && getGirlfriend().animation.name != 'scared')
+			getGirlfriend().playAnimation('scared', true, true);
+
+		if (PlayState.instance.health != 2) {
+			funneEffect.alpha = PlayState.instance.health - 0.3;
+			if (theFunneNumber < 0.7)
+				theFunneNumber = 0.7;
+			else if (theFunneNumber > 1.2)
+				theFunneNumber = 1.2;
+
+			if (theFunneNumber < 1)
+				funneEffect.y = -300;
+			else
+				funneEffect.y = -200;
+
+			funneEffect.setGraphicSize(Std.int(funneEffect.width * theFunneNumber));
+		}
+	}
+}
