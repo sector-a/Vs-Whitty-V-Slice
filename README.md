@@ -1,3 +1,3 @@
 # Vs Whitty V-Slice Port
-## By Sirox and Sector
+## By Shyllis and Sector
 ## Artworks by Leonid Kosherny
