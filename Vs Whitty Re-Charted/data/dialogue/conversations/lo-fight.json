@@ -1,0 +1,95 @@
+{
+  "version": "1.0.0",
+
+  "backdrop": {
+    "type": "solid",
+    "fadeTime": 2.0,
+    "color": "#BF808080"
+  },
+
+  "music": {
+    "asset": "Lunchbox",
+    "fadeTime": 2.0,
+    "looped": true
+  },
+
+  "outro": {
+    "type": "fade",
+    "fadeTime": 1.0
+  },
+
+  "dialogue": [
+    {
+      "speaker": "whitty",
+      "speakerAnimation": "normal",
+      "box": "whitty",
+      "boxAnimation": "enter",
+
+      "text": ["..Who-"]
+    },
+    {
+      "speaker": "whittybf",
+      "speakerAnimation": "talk",
+      "box": "whitty",
+      "boxAnimation": "idle",
+
+      "text": ["beep boop"]
+    },
+    {
+      "speaker": "whitty",
+      "speakerAnimation": "normal",
+      "box": "whitty",
+      "boxAnimation": "idle",
+
+      "text": [
+        "oh, you two."
+      ]
+    },
+    {
+      "speaker": "whitty",
+      "speakerAnimation": "normal",
+      "box": "whitty",
+      "boxAnimation": "idle",
+
+      "text": [
+        "Would both of you kindly leave me alone? I don't want anyone knowin' I'm here."
+      ]
+    },
+    {
+      "speaker": "whittybf",
+      "speakerAnimation": "talk",
+      "box": "whitty",
+      "boxAnimation": "idle",
+
+      "text": ["bip boop beep"]
+    },
+    {
+      "speaker": "whitty",
+      "speakerAnimation": "normal",
+      "box": "whitty",
+      "boxAnimation": "idle",
+
+      "text": [
+        "...Listen, I ain't lookin' for trouble tonight, just leave and all will be cool."
+      ]
+    },
+    {
+      "speaker": "whittybf",
+      "speakerAnimation": "talk",
+      "box": "whitty",
+      "boxAnimation": "idle",
+
+      "text": ["beepo bap skeboop"]
+    },
+    {
+      "speaker": "whitty",
+      "speakerAnimation": "normal",
+      "box": "whitty",
+      "boxAnimation": "idle",
+
+      "text": [
+        "..."
+      ]
+    }
+  ]
+}

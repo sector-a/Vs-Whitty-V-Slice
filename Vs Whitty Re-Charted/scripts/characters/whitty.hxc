@@ -1,0 +1,14 @@
+import funkin.play.PlayState;
+import funkin.play.character.MultiSparrowCharacter;
+
+class WhittyCharacter extends MultiSparrowCharacter {
+	function new() {
+		super('whitty');
+	}
+
+  override function onNoteHit(event) {
+    super.onNoteHit(event);
+    if (event.judgement == "perfect")
+        PlayState.instance.vocals.set_playerVolume(1);
+  }
+}

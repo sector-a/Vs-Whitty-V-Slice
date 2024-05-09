@@ -1,0 +1,66 @@
+import funkin.play.cutscene.dialogue.Conversation;
+import funkin.play.PlayState;
+import funkin.audio.FunkinSound;
+import funkin.Paths;
+import flixel.FlxG;
+import flixel.addons.ui.FlxUIInputText;
+
+class LoFightConversation extends Conversation {
+  var whittySound:FunkinSound;
+  var bfSound:FunkinSound;
+  var word:FlxUIInputText;
+
+  function new() {
+    super('lo-fight');
+  }
+  
+  override function onCreate(event){
+    super.onCreate(event);
+
+    whittySound = FunkinSound.load(Paths.sound('whittyEdited'), 0.6);
+    bfSound = FunkinSound.load(Paths.sound('pixelText', 'week6'), 0.6);
+
+    word = new FlxUIInputText(10, 10, 150, '', 8);
+  }
+
+  override function onUpdate(event) {
+    super.onUpdate(event);
+    
+    if (currentSpeaker.id.toLowerCase() != "whittybf") {
+      if(!currentDialogueBox.textDisplay.sounds.contains(whittySound))
+        currentDialogueBox.textDisplay.sounds = [whittySound];
+    }
+    else {
+        if(!currentDialogueBox.textDisplay.sounds.contains(bfSound))
+          currentDialogueBox.textDisplay.sounds = [bfSound];
+    }
+
+    if (!FlxG.save.data.isUpdikeUnlocked && FlxG.keys.justPressed.S){
+      secret();
+
+      if(word.text == "remorse"){
+        word.destroy();
+        FlxG.mouse.visible = false;
+        FlxG.camera.flash(0xFF00FF00, 1);
+        FunkinSound.playOnce(Paths.sound("clickText"), 0.6);
+        FlxG.save.data.isUpdikeUnlocked = true;
+      }
+    }
+  }
+
+  override public function onDialogueLine(event){
+    super.onDialogueLine(event);
+
+    FunkinSound.playOnce(Paths.sound("clickText"), 0.6);
+  }
+
+  function secret(){
+		word.setFormat(Paths.font("vcr.ttf"), 8, 0xFF000000);
+    word.screenCenter();
+    word.scrollFactor.set();
+    word.maxLength = 8;
+    word.hasFocus = true;
+		currentDialogueBox.add(word);
+    FlxG.mouse.visible = true;
+  }
+}

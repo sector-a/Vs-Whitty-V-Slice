@@ -1,0 +1,32 @@
+import funkin.play.stage.Stage;
+import funkin.play.PlayState;
+import funkin.Paths;
+import flixel.FlxSprite;
+import flixel.util.FlxTimer;
+import flixel.FlxG;
+
+class FacilityStage extends Stage {
+  var light:FlxSprite;
+
+	function new() {
+		super('facility');
+	}
+	
+	function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+		
+		light = getNamedProp('light');
+	}
+	
+	function onStepHit(event:SongTimeScriptEvent)
+	{
+		super.onStepHit(event);
+
+		if (FlxG.random.bool(15)) {
+			light.alpha = 0.000001;
+			new FlxTimer().start(0.1, function(tmr:FlxTimer) {
+			  light.alpha = 1;
+			 });
+		}
+	}
+}

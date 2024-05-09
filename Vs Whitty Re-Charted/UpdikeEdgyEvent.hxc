@@ -1,0 +1,109 @@
+import funkin.play.PlayState;
+import funkin.play.event.SongEvent;
+import funkin.play.character.CharacterDataParser;
+import funkin.play.character.CharacterType;
+import funkin.play.components.HealthIcon;
+
+class UpdikeEdgyEvent extends SongEvent {
+  var x:Float = 2784;
+ 
+	public override function handleEvent(data) {
+		if (PlayState.instance == null || PlayState.instance.currentStage == null || PlayState.instance.currentSong.id.toLowerCase() != "remorse") return;
+		
+		switch(data.value.type) {
+		  case "in":
+        typeIN();
+      case "out":
+        typeOUT();
+		}
+    
+    PlayState.instance.currentStage.refresh();
+	}
+	
+	function typeIN() {
+    if (PlayState.instance.currentStage.getBoyfriend() != null) {
+      PlayState.instance.currentStage.getBoyfriend().destroy();
+			var boyfriend = CharacterDataParser.fetchCharacter("bf-updike-edgy");
+      if (boyfriend != null) {
+          boyfriend.set_characterType(CharacterType.BF);
+          PlayState.instance.currentStage.addCharacter(boyfriend, CharacterType.BF);
+      }
+    }
+    
+     if (PlayState.instance.currentStage.getGirlfriend() != null) {
+	      PlayState.instance.currentStage.getGirlfriend().destroy();
+  			var girlfriend = CharacterDataParser.fetchCharacter("gf-kinky-edgy");
+        if (girlfriend != null) {
+            girlfriend.set_characterType(CharacterType.GF);
+            PlayState.instance.currentStage.addCharacter(girlfriend, CharacterType.GF);
+      }
+    }
+
+      if (PlayState.instance.currentStage.getDad() != null) {
+	      PlayState.instance.currentStage.getDad().destroy();
+  			var dad = CharacterDataParser.fetchCharacter("updike-edgy");
+        if (dad != null) {
+            dad.set_characterType(CharacterType.DAD);
+            PlayState.instance.currentStage.addCharacter(dad, CharacterType.DAD);
+      }
+    }
+
+    var bg:FlxSprite = PlayState.instance.currentStage.getNamedProp('bg');
+    var light:FlxSprite = PlayState.instance.currentStage.getNamedProp('light');
+    bg.x -= x;
+    light.x -= x;
+	}
+
+	function typeOUT() {
+    if (PlayState.instance.currentStage.getBoyfriend() != null) {
+      PlayState.instance.currentStage.getBoyfriend().destroy();
+			var boyfriend = CharacterDataParser.fetchCharacter("bf");
+      if (boyfriend != null) {
+          boyfriend.set_characterType(CharacterType.BF);
+          PlayState.instance.currentStage.addCharacter(boyfriend, CharacterType.BF);
+      }
+    }
+    
+    if (PlayState.instance.currentStage.getGirlfriend() != null) {
+      PlayState.instance.currentStage.getGirlfriend().destroy();
+			var girlfriend = CharacterDataParser.fetchCharacter("gf-kinky");
+      if (girlfriend != null) {
+          girlfriend.set_characterType(CharacterType.GF);
+          PlayState.instance.currentStage.addCharacter(girlfriend, CharacterType.GF);
+      }
+    }
+
+    if (PlayState.instance.currentStage.getDad() != null) {
+      PlayState.instance.currentStage.getDad().destroy();
+			var dad = CharacterDataParser.fetchCharacter("updike");
+      if (dad != null) {
+          dad.set_characterType(CharacterType.DAD);
+          PlayState.instance.currentStage.addCharacter(dad, CharacterType.DAD);
+      }
+    }
+
+    var bg:FlxSprite = PlayState.instance.currentStage.getNamedProp('bg');
+    var light:FlxSprite = PlayState.instance.currentStage.getNamedProp('light');
+    bg.x += x;
+    light.x += x;
+	}
+
+	public function getEventSchema() {
+	  return [{
+            name: "type",
+            title: "Type",
+            defaultValue: "in",
+            type: "enum",
+            keys: ["In" => "in",
+                  "Out" => "out"]
+    }];
+  }
+
+	public function getTitle() {
+		return "Updike Edgy Event";
+	}
+	
+	public function new() {
+		super('UpdikeEdgyEvent');
+	}
+}

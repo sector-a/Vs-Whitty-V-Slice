@@ -1,0 +1,124 @@
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.play.PlayStatePlaylist;
+import funkin.graphics.FunkinSprite;
+import funkin.audio.FunkinSound;
+import funkin.Paths;
+import flixel.FlxSprite;
+import flixel.util.FlxTimer;
+import flixel.tweens.FlxTween;
+import funkin.play.cutscene.dialogue.DialogueBox;
+import funkin.play.cutscene.dialogue.Conversation;
+import flixel.FlxG;
+
+class BallisticSong extends Song {
+  var hasPlayedCutscene:Bool;
+  var windSound:FunkinSound;
+
+  public function new(){
+    super('ballistic');
+    
+    hasPlayedCutscene = false;
+  }
+
+  public override function onCountdownStart(event:CountdownScriptEvent):Void {
+	  super.onCountdownStart(event);
+	  
+	  if (!PlayStatePlaylist.isStoryMode)
+      hasPlayedCutscene = true;
+      
+    if(!hasPlayedCutscene){
+      hasPlayedCutscene = true;
+      PlayState.instance.currentStage.getDad().alpha = 0.000001;
+      PlayState.instance.camHUD.alpha = 0.000001;
+      
+      event.cancel();
+      
+      playCutscene();
+    }
+	}
+	
+  function playCutscene() {
+	  PlayState.instance.isInCutscene = true;
+	  
+	  windSound = FunkinSound.load(Paths.sound('windLmao'), 0, true);
+	  windSound.fadeIn();
+
+    var bg:FlxSprite = PlayState.instance.currentStage.getNamedProp('whittyBack');
+	  var animation:FlxSprite = FunkinSprite.createSparrow(-425, 0, 'cuttinDeezeBalls');
+		animation.animation.addByPrefix('startup', 'Whitty Ballistic Cutscene', 24, false);
+		animation.antialiasing = true;
+		PlayState.instance.add(animation);
+
+	  PlayState.instance.camCutscene.visible = true;
+		
+    var white:FlxSprite = new FunkinSprite(-20, -20).makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFFFFFFFF);
+    white.cameras = [PlayState.instance.camCutscene];
+    white.zIndex = 1000000;
+    PlayState.instance.add(white);
+    white.alpha = 0.000001;
+
+  	animation.animation.play('startup');
+  
+  	new FlxTimer().start(2, function(tmr:FlxTimer) {
+  	  FunkinSound.playOnce(Paths.sound('micBreak'), 1.0);
+  	  
+  	  new FlxTimer().start(1.5, function(tmr:FlxTimer) {
+  	    FunkinSound.playOnce(Paths.sound('micThrow'), 1.0);
+  	    FunkinSound.playOnce(Paths.sound('slammin'), 1.0);
+  	    
+  	    new FlxTimer().start(1.75, function(tmr:FlxTimer) {
+  	      bg.animation.play('startup');
+  	      FunkinSound.playOnce(Paths.sound('souljaboyCrank'), 1.0);
+  	      FunkinSound.playOnce(Paths.sound('rumb'), 1.0);
+  	      FlxG.camera.shake(0.01, 0.5);
+  	      
+  	      new FlxTimer().start(1.25, function(tmr:FlxTimer) {
+  	        FunkinSound.playOnce(Paths.sound('ouchMyToe'), 1.0);
+  	        FlxG.camera.shake(0.03, 4);
+  	        
+  	        new FlxTimer().start(3, function(tmr:FlxTimer) {
+  	          FlxTween.tween(white, {alpha: 1}, 1);
+  	          
+  	          new FlxTimer().start(3, function(tmr:FlxTimer) {
+  	            animation.destroy();
+                bg.animation.play('idle');
+                PlayState.instance.currentStage.getDad().alpha = 1;
+  	            FlxTween.tween(white, {alpha: 0}, 1);
+  	            
+  	            new FlxTimer().start(1, function(tmr:FlxTimer) {
+  	                windSound.fadeOut();
+  	                windSound.destroy();
+  	                white.destroy();
+  	                PlayState.instance.camHUD.alpha = 1;
+              	    PlayState.instance.isInCutscene = false;
+              	    startDialogue();
+  	            });
+  	          });
+  	        });
+  	      });
+  	    });
+  	  });
+  	});
+	}
+
+  function startDialogue() {
+    PlayState.instance.startConversation('ballistic');
+  }
+
+  function onSongRetry(event:ScriptEvent) {
+    super.onSongRetry(event);
+
+    hasPlayedCutscene = true;
+  }
+
+  function onCreate(event:ScriptEvent):Void {
+    super.onCreate(event);
+
+    hasPlayedCutscene = false;
+  }
+
+  public override function onDialogueEnd() {
+    PlayState.instance.startCountdown();
+  }
+}

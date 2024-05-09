@@ -1,0 +1,48 @@
+{
+  "props": [
+    {
+      "danceEvery": 0,
+      "zIndex": 10,
+      "position": [-500, -300],
+      "scale": [1.1, 1.1],
+      "animType": "sparrow",
+      "name": "whittyBack",
+      "isPixel": false,
+      "assetPath": "bgs/whittyBack",
+      "scroll": [0.9, 0.9],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 20,
+      "position": [-650, 670],
+      "scale": [1.1, 1.1],
+      "animType": "sparrow",
+      "name": "whittyFront",
+      "isPixel": false,
+      "assetPath": "bgs/whittyFront",
+      "scroll": [0.9, 0.9],
+      "animations": []
+    }
+  ],
+  "cameraZoom": 0.9,
+  "version": "1.0.0",
+  "characters": {
+    "bf": {
+      "zIndex": 300,
+      "position": [1120, 900],
+      "cameraOffsets": [-150, -100]
+    },
+    "dad": {
+      "zIndex": 200,
+      "position": [400, 900],
+      "cameraOffsets": [230, -150]
+    },
+    "gf": {
+      "zIndex": 100,
+      "cameraOffsets": [0, 0],
+      "position": [850, 800]
+    }
+  },
+  "name": "Back Alley"
+}

@@ -1,0 +1,50 @@
+{
+    "version": "1.0.0",
+    "name": "Whitty Crazy",
+    "renderType": "multisparrow",
+    "assetPath": "characters/WhittyCrazy",
+    "flipX": false,
+    "singTime": 4,
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "Whitty idle dance",
+            "offsets": [
+                181,
+                412
+            ]
+        },
+        {
+            "name": "singRIGHT",
+            "prefix": "whitty sing note right",
+            "offsets": [
+                229,
+                327
+            ]
+        },
+        {
+            "name": "singDOWN",
+            "prefix": "Whitty Sing Note DOWN",
+            "offsets": [
+                249,
+                287
+            ]
+        },
+        {
+            "name": "singUP",
+            "prefix": "Whitty Sing Note UP",
+            "offsets": [
+                190,
+                513
+            ]
+        },
+        {
+            "name": "singLEFT",
+            "prefix": "Whitty Sing Note LEFT",
+            "offsets": [
+                243,
+                431
+            ]
+        }
+    ]
+}

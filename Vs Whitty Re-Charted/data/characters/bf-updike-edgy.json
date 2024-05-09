@@ -1,0 +1,140 @@
+{
+	"version": "1.0.0",
+	"renderType": "multisparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "Updike BF(Edgy)",
+	"flipX": true,
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"singTime": 8,
+	"startingAnimation": "idle",
+	"isPixel": false,
+	"assetPath": "characters/bf_assets",
+	"healthIcon": {
+		"offsets": [
+			0,
+			0
+		],
+		"isPixel": false,
+		"scale": 1,
+		"flipX": false,
+		"id": "bf"
+	},
+	"animations": [
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "BF idle dance edgy0",
+			"flipX": false,
+			"looped": false,
+			"name": "idle"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				7,
+				-11
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE LEFT edgy0",
+			"flipX": false,
+			"looped": false,
+			"name": "singLEFT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				-50
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE DOWN edgy0",
+			"flipX": false,
+			"looped": false,
+			"name": "singDOWN"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-30,
+				31
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE UP edgy0",
+			"flipX": false,
+			"looped": false,
+			"name": "singUP"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-32,
+				-7
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE RIGHT edgy0",
+			"flipX": false,
+			"looped": false,
+			"name": "singRIGHT"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				7,
+				19
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE LEFT MISS edgy0",
+			"flipX": false,
+			"looped": false,
+			"name": "singLEFTmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				-19
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE DOWN MISS edgy0",
+			"flipX": false,
+			"looped": false,
+			"name": "singDOWNmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-30,
+				20
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE UP MISS edgy0",
+			"flipX": false,
+			"looped": false,
+			"name": "singUPmiss"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				-32,
+				21
+			],
+			"frameRate": 24,
+			"prefix": "BF NOTE RIGHT MISS edgy0",
+			"flipX": false,
+			"looped": false,
+			"name": "singRIGHTmiss"
+		}
+	]
+}

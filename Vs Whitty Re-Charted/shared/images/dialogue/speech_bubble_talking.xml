@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="speech_bubble_talking.png">
+<!-- Created with whitty-executor.exe -->
+<SubTexture name="Speech Bubble Normal Open0000" x="0" y="0" width="39" height="118" frameX="-210" frameY="-0" frameWidth="1263" frameHeight="343"/>
+<SubTexture name="Speech Bubble Normal Open0001" x="39" y="0" width="317" height="150" frameX="-113" frameY="-60" frameWidth="1263" frameHeight="343"/>
+<SubTexture name="Speech Bubble Normal Open0002" x="356" y="0" width="835" height="230" frameX="-51" frameY="-80" frameWidth="1263" frameHeight="343"/>
+<SubTexture name="Speech Bubble Normal Open0003" x="1191" y="0" width="1263" height="253" frameX="-0" frameY="-90" frameWidth="1263" frameHeight="343"/>
+<SubTexture name="Speech Bubble Normal Open0004" x="1191" y="0" width="1263" height="253" frameX="-0" frameY="-90" frameWidth="1263" frameHeight="343"/>
+<SubTexture name="speech bubble normal0000" x="1191" y="0" width="1263" height="253" frameX="-0" frameY="-90" frameWidth="1263" frameHeight="343"/>
+<SubTexture name="speech bubble normal0001" x="1191" y="0" width="1263" height="253" frameX="-0" frameY="-90" frameWidth="1263" frameHeight="343"/>
+</TextureAtlas>

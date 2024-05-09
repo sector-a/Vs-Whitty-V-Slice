@@ -1,0 +1,39 @@
+import funkin.play.cutscene.dialogue.Conversation;
+import funkin.play.PlayState;
+import funkin.audio.FunkinSound;
+import funkin.Paths;
+
+class BallisticConversation extends Conversation {
+  var whittySound:FunkinSound;
+  var bfSound:FunkinSound;
+
+  function new() {
+    super('ballistic');
+  }
+  
+  override function onCreate(event){
+    super.onCreate(event);
+
+    whittySound = FunkinSound.load(Paths.sound('ballisticEdited'), 0.6);
+    bfSound = FunkinSound.load(Paths.sound('pixelText', 'week6'), 0.6);
+  }
+
+  override function onUpdate(event) {
+    super.onUpdate(event);
+    
+    if (currentSpeaker.id.toLowerCase() != "whittybf") {
+      if(!currentDialogueBox.textDisplay.sounds.contains(whittySound))
+        currentDialogueBox.textDisplay.sounds = [whittySound];
+    }
+    else {
+        if(!currentDialogueBox.textDisplay.sounds.contains(bfSound))
+          currentDialogueBox.textDisplay.sounds = [bfSound];
+    }
+  }
+
+  override public function onDialogueLine(event){
+    super.onDialogueLine(event);
+
+    FunkinSound.playOnce(Paths.sound("clickText"), 0.6);
+  }
+}
