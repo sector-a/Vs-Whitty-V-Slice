@@ -25,7 +25,7 @@
     },
     "stage": "alleyCrazy",
     "noteStyle": "funkin",
-    "ratings": {    },
+    "ratings": {"easy": 6, "normal": 6, "hard": 10},
     "album": "volume3",
     "previewStart": 0,
     "previewEnd": 0

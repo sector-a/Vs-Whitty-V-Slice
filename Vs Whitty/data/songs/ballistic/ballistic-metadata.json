@@ -10,7 +10,6 @@
     "vocals": {    }
   },
   "playData": {
-    "album": "volume3",
     "songVariations": [    ],
     "difficulties": [
       "easy",
@@ -25,8 +24,8 @@
       "altInstrumentals": [      ]
     },
     "stage": "alleyCrazy",
-    "noteStyle": "funkin",
-    "ratings": {    },
+    "noteStyle": "item",
+    "ratings": { "easy": 6, "normal": 6, "hard": 12 },
     "previewStart": 0,
     "previewEnd": 0
   },

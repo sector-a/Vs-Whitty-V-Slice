@@ -25,11 +25,7 @@
     },
     "stage": "alleyCrazy",
     "noteStyle": "item",
-    "ratings": {
-      "easy": 0,
-      "normal": 0,
-      "hard": 0
-    },
+    "ratings": { "easy": 5, "normal": 5, "hard": 11 },
     "previewStart": 0,
     "previewEnd": 0
   },

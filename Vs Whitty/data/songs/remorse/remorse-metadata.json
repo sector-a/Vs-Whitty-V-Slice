@@ -12,9 +12,7 @@
   "playData": {
     "album": "volume3",
     "songVariations": [    ],
-    "difficulties": [
-      "normal"
-    ],
+    "ratings": {"normal": 2},
     "characters": {
       "player": "bf",
       "girlfriend": "gf-kinky",

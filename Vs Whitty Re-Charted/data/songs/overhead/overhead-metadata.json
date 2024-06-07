@@ -25,11 +25,7 @@
     },
     "stage": "alley",
     "noteStyle": "funkin",
-    "ratings": {
-      "easy": 0,
-      "hard": 0,
-      "normal": 0
-    },
+    "ratings": {"easy": 4, "normal": 4, "hard": 7},
     "previewStart": 0,
     "previewEnd": 0
   },

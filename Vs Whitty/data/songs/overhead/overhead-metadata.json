@@ -2,6 +2,7 @@
   "version": "2.2.2",
   "songName": "Overhead",
   "artist": "sock.clip",
+  "divisions": 96,
   "looped": false,
   "offsets": {
     "instrumental": 0,
@@ -9,7 +10,6 @@
     "vocals": {    }
   },
   "playData": {
-    "album": "volume3",
     "songVariations": [    ],
     "difficulties": [
       "easy",
@@ -25,7 +25,7 @@
     },
     "stage": "alley",
     "noteStyle": "funkin",
-    "ratings": {    },
+    "ratings": {"easy": 4, "normal": 4, "hard": 8},
     "previewStart": 0,
     "previewEnd": 0
   },
