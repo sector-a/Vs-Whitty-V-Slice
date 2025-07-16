@@ -5,6 +5,7 @@
     "assetPath": "characters/WhittyCrazy",
     "flipX": false,
     "singTime": 4,
+    "cameraOffsets": [150, -600],
     "animations": [
         {
             "name": "idle",

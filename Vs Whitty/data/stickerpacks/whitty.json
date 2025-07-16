@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "name": "Whitty",
+  "artist": "LeonidKosherny",
+  "stickers": [
+    "transitionSwag/stickers-whitty/whittySticker",
+    "transitionSwag/stickers-whitty/whittySticker1",
+    "transitionSwag/stickers-whitty/whittySticker2"
+  ]
+}

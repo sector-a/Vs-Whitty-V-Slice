@@ -5,6 +5,7 @@
     "assetPath": "characters/WhittySprites",
     "flipX": false,
     "singTime": 4,
+    "cameraOffsets": [130, -550],
     "animations": [
         {
             "name": "idle",

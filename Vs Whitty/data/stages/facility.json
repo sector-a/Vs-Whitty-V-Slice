@@ -20,7 +20,8 @@
       "animType": "sparrow",
       "name": "light",
       "isPixel": false,
-      "assetPath": "bgs/lightEdited",
+      "assetPath": "bgs/light",
+      "blend": "add",
       "scroll": [1, 1],
       "animations": []
     }
