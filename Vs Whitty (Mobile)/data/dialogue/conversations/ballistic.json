@@ -1,0 +1,69 @@
+{
+  "version": "1.0.0",
+
+  "backdrop": {
+    "type": "solid",
+    "fadeTime": 2.0,
+    "color": "#BF808080"
+  },
+
+  "music": {
+    "asset": "Lunchbox",
+    "fadeTime": 2.0,
+    "looped": true
+  },
+
+  "outro": {
+    "type": "fade",
+    "fadeTime": 1.0
+  },
+
+  "dialogue": [
+    {
+      "speaker": "whitty",
+      "speakerAnimation": "crazy",
+      "box": "whitty",
+      "boxAnimation": "enter",
+
+      "text": ["ENOUGH."]
+    },
+    {
+      "speaker": "whitty",
+      "speakerAnimation": "crazy",
+      "box": "whitty",
+      "boxAnimation": "idle",
+
+      "text": [
+        "THEY'VE TAKEN ALL I EVER HAD."
+      ]
+    },
+    {
+      "speaker": "whitty",
+      "speakerAnimation": "crazy",
+      "box": "whitty",
+      "boxAnimation": "idle",
+
+      "text": [
+        "I'VE BEEN DOOMED INTO AN ENDLESS CYCLE OF RUNNING AND HIDING FROM THINGS I CANNOT CONTROL."
+      ]
+    },
+    {
+      "speaker": "whitty",
+      "speakerAnimation": "crazy",
+      "box": "whitty",
+      "boxAnimation": "idle",
+
+      "text": [
+        "CURSE YOU, CURSE YOU AND THE FILTH THAT BROUGHT YOU INTO THIS WORLD."
+      ]
+    },
+    {
+      "speaker": "whittybf",
+      "speakerAnimation": "talk",
+      "box": "whitty",
+      "boxAnimation": "idle",
+
+      "text": ["baboop peebo"]
+    }
+  ]
+}

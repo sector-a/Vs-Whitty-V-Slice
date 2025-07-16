@@ -1,0 +1,14 @@
+import funkin.play.PlayState;
+import funkin.play.character.MultiSparrowCharacter;
+
+class UpdikeCharacter extends MultiSparrowCharacter {
+	function new() {
+		super('updike');
+	}
+
+  override function onNoteHit(event) {
+    super.onNoteHit(event);
+    if (event.judgement == "perfect")
+        PlayState.instance.vocals.set_playerVolume(1);
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "props": [
+    {
+      "danceEvery": 1,
+      "zIndex": 10,
+      "position": [-475, -150],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "whittyBack",
+      "isPixel": false,
+      "assetPath": "bgs/BallisticBackground",
+      "scroll": [0.9, 0.9],
+      "startingAnimation": "startupStatic",
+      "animations": [
+        {
+          "name": "startupStatic",
+          "prefix": "Background Whitty Startup",
+          "frameRate": 0,
+          "looped": false,
+          "flipX": false,
+          "flipY": false
+        },
+        {
+          "name": "startup",
+          "prefix": "Background Whitty Startup",
+          "frameRate": 24,
+          "looped": false,
+          "flipX": false,
+          "flipY": false
+        },
+        {
+          "name": "idle",
+          "prefix": "Background Whitty Moving",
+          "frameRate": 24,
+          "looped": true,
+          "flipX": false,
+          "flipY": false
+        }
+      ]
+    }
+  ],
+  "cameraZoom": 0.9,
+  "version": "1.0.0",
+  "characters": {
+    "bf": {
+      "zIndex": 300,
+      "position": [1120, 950],
+      "cameraOffsets": [-150, -100]
+    },
+    "dad": {
+      "zIndex": 200,
+      "position": [525, 1350],
+      "cameraOffsets": [0, 0]
+    },
+    "gf": {
+      "zIndex": 100,
+      "cameraOffsets": [0, 0],
+      "position": [850, 800]
+    }
+  },
+  "name": "Back Alley Crazy"
+}
