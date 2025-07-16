@@ -16,33 +16,33 @@ class LoFightSong extends Song {
 
   public function new(){
     super('lo-fight');
-    
+
     hasPlayedCutscene = false;
   }
-  
+
   public override function onCountdownStart(event:CountdownScriptEvent):Void {
 	  super.onCountdownStart(event);
-	  
+
 	  if (!PlayStatePlaylist.isStoryMode)
       hasPlayedCutscene = true;
-      
+
     if(!hasPlayedCutscene){
       hasPlayedCutscene = true;
       PlayState.instance.currentStage.getDad().alpha = 0.000001;
       PlayState.instance.currentStage.getGirlfriend().alpha = 0.000001;
       PlayState.instance.camHUD.alpha = 0.000001;
-      
+
       event.cancel();
-      
+
       playCutscene();
     }
 	}
-	
+
   function playCutscene() {
   	var camPos:Array<Float> = [PlayState.instance.currentStage.getDad().cameraFocusPoint.x, PlayState.instance.currentStage.getDad().cameraFocusPoint.y];
-  	
+
 	  PlayState.instance.isInCutscene = true;
-	  
+
 	  citySound = FunkinSound.load(Paths.sound('city'), 0, true);
 	  citySound.fadeIn();
 
@@ -50,43 +50,43 @@ class LoFightSong extends Song {
 		animation.animation.addByPrefix('startup', 'Whitty Cutscene Startup ', 24, false);
 		animation.antialiasing = true;
 		PlayState.instance.add(animation);
-		
+
 		PlayState.instance.camCutscene.visible = true;
-		
+
     var black:FlxSprite = new FunkinSprite(-20, -20).makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFF000000);
     black.cameras = [PlayState.instance.camCutscene];
     black.zIndex = 1000000;
     PlayState.instance.add(black);
     black.alpha = 1.0;
-		
-		PlayState.instance.tweenCameraToPosition(camPos[0]-320, camPos[1]-200, 0, FlxEase.quadInOut);
+
+		PlayState.instance.tweenCameraToPosition(camPos[0]-185, camPos[1]-250, 0, FlxEase.quadInOut);
 		FlxTween.tween(black, {alpha: 0}, 3);
-	
+
 		new FlxTimer().start(3, function(tmr:FlxTimer) {
   		animation.animation.play('startup');
-  		
+
   		new FlxTimer().start(1.25, function(tmr:FlxTimer) {
   		  FunkinSound.playOnce(Paths.sound('rip'), 1.0);
-  		  
+
   		  new FlxTimer().start(0.1, function(tmr:FlxTimer) {
     		  FunkinSound.playOnce(Paths.sound('fire'), 1.0);
     		});
   		});
-  	
+
   		new FlxTimer().start(5, function(tmr:FlxTimer) {
   		  FunkinSound.playOnce(Paths.sound('beepboop'), 1.0);
   		  PlayState.instance.currentStage.getBoyfriend().playAnimation('singUP', true);
   		  PlayState.instance.tweenCameraToPosition(camPos[0], camPos[1], 1, FlxEase.quadInOut);
   		});
-  
+
   	  new FlxTimer().start(9, function(tmr:FlxTimer) {
   	    FlxTween.tween(black, {alpha: 1}, 1);
-  
+
   	    new FlxTimer().start(1, function(tmr:FlxTimer) {
         	animation.destroy();
         	PlayState.instance.currentStage.getDad().alpha = 1;
           PlayState.instance.currentStage.getGirlfriend().alpha = 1;
-          
+
           FlxTween.tween(black, {alpha: 0}, 1);
           new FlxTimer().start(1, function(tmr:FlxTimer) {
              citySound.fadeOut();
@@ -99,7 +99,7 @@ class LoFightSong extends Song {
   	  });
   	});
 	}
-	
+
   function startDialogue() {
     PlayState.instance.startConversation('lo-fight');
   }
