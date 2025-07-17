@@ -25,7 +25,8 @@
     },
     "album": "backalleyblitz",
     "stage": "alley",
-    "noteStyle": "item",
+    "noteStyle": "funkin",
+    "stickerPack": "whitty",
     "ratings": {"easy": 1, "normal": 1, "hard": 3},
     "previewStart": 0,
     "previewEnd": 0

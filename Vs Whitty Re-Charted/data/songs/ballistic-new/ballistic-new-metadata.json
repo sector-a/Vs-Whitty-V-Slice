@@ -23,11 +23,11 @@
       "instrumental": "",
       "altInstrumentals": [      ]
     },
+    "album": "backalleyblitz",
     "stage": "alleyCrazy",
     "noteStyle": "funkin",
     "stickerPack": "whitty",
     "ratings": {"easy": 6, "normal": 6, "hard": 10},
-    "album": "backalleyblitz",
     "previewStart": 0,
     "previewEnd": 0
   },
