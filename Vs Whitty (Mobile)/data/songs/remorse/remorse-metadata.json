@@ -10,8 +10,7 @@
     "vocals": {    }
   },
   "playData": {
-    "album": "volume3",
-      "difficulties": [
+    "difficulties": [
       "normal"
     ],
     "songVariations": [    ],
@@ -23,6 +22,7 @@
       "instrumental": "",
       "altInstrumentals": [      ]
     },
+    "album": "backalleyblitz",
     "stage": "facility",
     "noteStyle": "funkin",
     "stickerPack": "whitty",

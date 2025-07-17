@@ -23,6 +23,7 @@
       "instrumental": "",
       "altInstrumentals": [      ]
     },
+    "album": "backalleyblitz",
     "stage": "alley",
     "noteStyle": "item",
     "ratings": {"easy": 1, "normal": 1, "hard": 3},
