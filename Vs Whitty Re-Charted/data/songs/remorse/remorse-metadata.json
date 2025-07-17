@@ -11,6 +11,9 @@
   },
   "playData": {
     "album": "volume3",
+      "difficulties": [
+      "normal"
+    ],
     "songVariations": [    ],
     "ratings": {"normal": 2},
     "characters": {
@@ -21,10 +24,8 @@
       "altInstrumentals": [      ]
     },
     "stage": "facility",
-    "noteStyle": "item",
-    "ratings": {
-      "normal": 0
-    },
+    "noteStyle": "funkin",
+    "stickerPack": "whitty",
     "previewStart": 0,
     "previewEnd": 0
   },

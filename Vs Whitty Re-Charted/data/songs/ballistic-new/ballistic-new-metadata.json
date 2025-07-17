@@ -25,6 +25,7 @@
     },
     "stage": "alleyCrazy",
     "noteStyle": "funkin",
+    "stickerPack": "whitty",
     "ratings": {"easy": 6, "normal": 6, "hard": 10},
     "album": "volume3",
     "previewStart": 0,

@@ -1,0 +1,11 @@
+{
+  "title": "Vs Whitty",
+  "description": "Vs Whitty FNF port",
+  "contributors": [{
+    "name": "shyllis",
+    "name": "sector"
+  }],
+  "api_version": "0.6.4",
+  "mod_version": "1.0.0",
+  "license": "Apache-2.0"
+}

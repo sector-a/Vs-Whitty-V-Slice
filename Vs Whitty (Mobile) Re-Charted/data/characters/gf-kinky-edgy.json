@@ -1,0 +1,72 @@
+{
+	"version": "1.0.0",
+	"renderType": "multisparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 1,
+	"scale": 1,
+	"name": "Spicy GF(Edgy)",
+	"flipX": false,
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"singTime": 4,
+	"startingAnimation": "danceRight",
+	"isPixel": false,
+	"assetPath": "characters/gf_but_spicy",
+	"healthIcon": {
+		"offsets": [
+			0,
+			0
+		],
+		"id": "gf",
+		"flipX": false,
+		"isPixel": false,
+		"scale": 1
+	},
+	"animations": [
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"prefix": "gf sad",
+			"flipX": false,
+			"looped": false,
+			"name": "sad"
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+			"name": "danceRight",
+			"prefix": "GF Dancing Beat edgy",
+			"frameIndices": [
+			  15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
+			],
+			"flipX": false,
+			"looped": false
+		},
+		{
+			"flipY": false,
+			"offsets": [
+				0,
+				0
+			],
+			"frameRate": 24,
+            "name": "danceLeft",
+            "prefix": "GF Dancing Beat edgy",
+            "frameIndices": [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+			"flipX": false,
+			"looped": false
+		}
+	]
+}

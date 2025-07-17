@@ -25,7 +25,8 @@
     },
     "stage": "alley",
     "noteStyle": "funkin",
-    "ratings": {"easy": 4, "normal": 4, "hard": 7},
+    "stickerPack": "whitty",
+    "ratings": {"easy": 4, "normal": 4, "hard": 8},
     "previewStart": 0,
     "previewEnd": 0
   },

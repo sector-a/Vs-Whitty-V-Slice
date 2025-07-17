@@ -1,0 +1,85 @@
+{
+  "version": "1.0.0",
+
+  "backdrop": {
+    "type": "solid",
+    "fadeTime": 2.0,
+    "color": "#BF808080"
+  },
+
+  "music": {
+    "asset": "Lunchbox",
+    "fadeTime": 2.0,
+    "looped": true
+  },
+
+  "outro": {
+    "type": "fade",
+    "fadeTime": 1.0
+  },
+
+  "dialogue": [
+    {
+      "speaker": "whitty",
+      "speakerAnimation": "agitated",
+      "box": "whitty",
+      "boxAnimation": "enter",
+
+      "text": ["I see how it is."]
+    },
+    {
+      "speaker": "whittybf",
+      "speakerAnimation": "talk",
+      "box": "whitty",
+      "boxAnimation": "idle",
+
+      "text": ["brep bappity boop"]
+    },
+    {
+      "speaker": "whitty",
+      "speakerAnimation": "agitated",
+      "box": "whitty",
+      "boxAnimation": "idle",
+
+      "text": [
+        "You're really pushing my limits, dude."
+      ]
+    },
+    {
+      "speaker": "whittybf",
+      "speakerAnimation": "talk",
+      "box": "whitty",
+      "boxAnimation": "idle",
+
+      "text": ["bip bep skoo de boop"]
+    },
+    {
+      "speaker": "whitty",
+      "speakerAnimation": "agitated",
+      "box": "whitty",
+      "boxAnimation": "idle",
+
+      "text": [
+        "Well how about you go die in a ditch instead."
+      ]
+    },
+    {
+      "speaker": "whittybf",
+      "speakerAnimation": "talk",
+      "box": "whitty",
+      "boxAnimation": "idle",
+
+      "text": ["bepoobee skoop"]
+    },
+    {
+      "speaker": "whitty",
+      "speakerAnimation": "agitated",
+      "box": "whitty",
+      "boxAnimation": "idle",
+
+      "text": [
+        "...Don't make me do this."
+      ]
+    }
+  ]
+}

@@ -24,8 +24,9 @@
       "altInstrumentals": [      ]
     },
     "stage": "alleyCrazy",
-    "noteStyle": "item",
-    "ratings": { "easy": 5, "normal": 5, "hard": 11 },
+    "noteStyle": "funkin",
+    "stickerPack": "whitty",
+    "ratings": { "easy": 6, "normal": 6, "hard": 12 },
     "previewStart": 0,
     "previewEnd": 0
   },

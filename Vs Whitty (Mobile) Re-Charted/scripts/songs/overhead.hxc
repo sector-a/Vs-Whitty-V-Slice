@@ -1,0 +1,69 @@
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.play.PlayStatePlaylist;
+import funkin.graphics.FunkinSprite;
+import funkin.audio.FunkinSound;
+import funkin.Paths;
+import flixel.FlxSprite;
+import flixel.util.FlxTimer;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.FlxG;
+
+class OverheadSong extends Song {
+  var hasPlayedCutscene:Bool;
+
+  public function new(){
+    super('overhead');
+    
+    hasPlayedCutscene = false;
+  }
+  
+  public override function onCountdownStart(event:CountdownScriptEvent):Void {
+	  super.onCountdownStart(event);
+	  
+	  if (!PlayStatePlaylist.isStoryMode)
+      hasPlayedCutscene = true;
+      
+    if(!hasPlayedCutscene){
+      hasPlayedCutscene = true;
+      
+      event.cancel();
+      
+      startDialogue();
+    }
+	}
+	
+  function startDialogue() {
+  	PlayState.instance.camCutscene.visible = true;
+  	
+    var black:FlxSprite = new FunkinSprite(-20, -20).makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFF000000);
+    black.cameras = [PlayState.instance.camCutscene];
+    black.zIndex = 1000000;
+    PlayState.instance.add(black);
+    black.alpha = 1.0;
+    
+    FlxTween.tween(black, {alpha: 0}, 2);
+    
+    new FlxTimer().start(2, function(tmr:FlxTimer) {
+      black.destroy();
+      PlayState.instance.startConversation('overhead');
+    });
+  }
+
+  function onSongRetry(event:ScriptEvent) {
+    super.onSongRetry(event);
+
+    hasPlayedCutscene = true;
+  }
+
+  function onCreate(event:ScriptEvent):Void {
+    super.onCreate(event);
+
+    hasPlayedCutscene = false;
+  }
+
+  public override function onDialogueEnd() {
+    PlayState.instance.startCountdown();
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "props": [
+    {
+      "danceEvery": 0,
+      "zIndex": 10,
+      "position": [-600, -400],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "bg",
+      "isPixel": false,
+      "assetPath": "bgs/wallbg",
+      "scroll": [1, 1],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 20,
+      "position": [398, -120],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "light",
+      "isPixel": false,
+      "assetPath": "bgs/light",
+      "blend": "add",
+      "scroll": [1, 1],
+      "animations": []
+    }
+  ],
+  "cameraZoom": 0.9,
+  "version": "1.0.0",
+  "characters": {
+    "bf": {
+      "zIndex": 300,
+      "position": [1150, 800],
+      "cameraOffsets": [-100, -100]
+    },
+    "dad": {
+      "zIndex": 200,
+      "position": [175, 850],
+      "cameraOffsets": [210, -100]
+    },
+    "gf": {
+      "zIndex": 100,
+      "cameraOffsets": [0, 0],
+      "position": [700, 725]
+    }
+  },
+  "name": "Facility"
+}

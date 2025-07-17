@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "name": "WhittyBF",
+  "assetPath": "dialogue/portraits/boyfriendPort",
+  "flipX": false,
+  "isPixel": false,
+  "scale": 0.8,
+  "offsets": [820, 265],
+  "animations": [
+    {
+      "name": "talk",
+      "prefix": "BF Portrait Enter instance 1",
+      "offsets": [0, 0],
+      "frameRate": 12
+    }
+  ]
+}

@@ -49,8 +49,8 @@
     },
     "dad": {
       "zIndex": 200,
-      "position": [525, 950],
-      "cameraOffsets": [250, -200]
+      "position": [525, 1350],
+      "cameraOffsets": [0, 0]
     },
     "gf": {
       "zIndex": 100,
